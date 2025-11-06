@@ -45,10 +45,6 @@ https://docs.godotengine.org/en/stable/index.html
 
 **Jace:** I thought you might have trouble, so I came up with a **theme** for the game jam, to get your brainstorm brewing.
 
-## Theme:
-
-MAGIC!!
-
 ## Step 4: Play your game!!
 
 Play the game as you go. Let a conversation between you and the game begin. What does the game want you to do? Can you figure out how to do it? Think simple at first, and follow my hard-earned tips. Getting **anything** to work is an accomplishment. 
