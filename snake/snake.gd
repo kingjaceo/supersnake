@@ -40,6 +40,10 @@ func _process(delta):
 	})
 	
 	_update_chunks()
+	
+	## check collisions
+	#   for every chunk below Chunk 2:
+	#     check if its distance from Chunk 1's position is less than twice the radius
 
 
 func _update_chunks():

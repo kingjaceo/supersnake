@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cdm80x5f7vpis"]
 
-[ext_resource type="Script" path="res://_common/escape_menu.gd" id="1_tdy0o"]
+[ext_resource type="Script" uid="uid://10rppwbkc6gl" path="res://_common/escape_menu.gd" id="1_tdy0o"]
 
 [node name="EscapeMenu" type="Control"]
 visible = false
