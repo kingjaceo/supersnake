@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cs08dwnrlb8sc"]
 
-[ext_resource type="Script" path="res://_common/start_screen.gd" id="1_p0qrx"]
+[ext_resource type="Script" uid="uid://cp31psh8pdykv" path="res://_common/start_screen.gd" id="1_p0qrx"]
 [ext_resource type="Theme" uid="uid://5vaqpc5yciov" path="res://_common/main_theme.tres" id="2_jovfd"]
-[ext_resource type="Shader" path="res://_common/shaders/scrolling_background.gdshader" id="2_p6cbr"]
+[ext_resource type="Shader" uid="uid://bydjq4btllckh" path="res://_common/shaders/scrolling_background.gdshader" id="2_p6cbr"]
 [ext_resource type="Texture2D" uid="uid://buxlufc86is5u" path="res://icon.svg" id="6_d78v2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qhfm8"]
@@ -41,7 +41,7 @@ theme = ExtResource("2_jovfd")
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_font_sizes/font_size = 50
-text = "Stay in Your Lane"
+text = "supersnake"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
@@ -55,22 +55,22 @@ size_flags_horizontal = 4
 [node name="GameMode1" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Survival"
+text = "survival"
 
 [node name="GameMode2" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Frogger"
+text = "other"
 
 [node name="Credits" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Credits"
+text = "credits"
 
 [node name="Exit" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Exit"
+text = "exit"
 
 [node name="Control" type="Control" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
