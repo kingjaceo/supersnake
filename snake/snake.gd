@@ -40,6 +40,13 @@ func add_chunk():
 	chunks.append(next_chunk)
 
 
+func teleport(new_global: Vector2):
+	var offset = new_global - global_position
+	global_position = new_global
+	for i in range(position_history.size()):
+		position_history[i].pos += offset
+
+
 func _move_and_turn(delta):
 	var input_dir = Input.get_axis("ui_left", "ui_right")
 	var speed_input = Input.get_axis("ui_down", "ui_up")
