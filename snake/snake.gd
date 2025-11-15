@@ -23,6 +23,7 @@ func _ready():
 			chunks.append(child)
 
 
+## AI generated code!!
 func _process(delta):
 	# move forward: use delta and (current) speed
 	var input_dir = Input.get_axis("ui_left", "ui_right")
@@ -42,6 +43,7 @@ func _process(delta):
 	_update_chunks()
 
 
+## AI generated code!
 func _update_chunks():
 	for i in range(chunks.size()):
 		var target_distance = chunk_spacing * (i + 1)
@@ -67,6 +69,7 @@ func _update_chunks():
 		position_history.pop_back()
 
 
+## AI generated code!
 func get_history_length() -> float:
 	var total = 0.0
 	for i in range(position_history.size() - 1):

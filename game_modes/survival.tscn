@@ -369,7 +369,7 @@ script = ExtResource("3_bmc4w")
 
 [node name="Snake" parent="." instance=ExtResource("2_1muw0")]
 modulate = Color(0.3372549, 0, 0.6745098, 1)
-position = Vector2(56, 24)
+position = Vector2(144, 82)
 speed = 30.0
 acceleration = 20.0
 min_speed = 30.0
