@@ -39,7 +39,7 @@ theme = ExtResource("2_jovfd")
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_font_sizes/font_size = 50
-text = "supersnake"
+text = "snake noir"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]

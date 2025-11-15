@@ -9,6 +9,7 @@ texture_filter = 1
 script = ExtResource("1_opl32")
 
 [node name="Head" type="Sprite2D" parent="."]
+modulate = Color(0, 0.354794, 0.354794, 1)
 texture = ExtResource("1_j2kkt")
 
 [node name="Chunk1" type="Sprite2D" parent="."]

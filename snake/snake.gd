@@ -17,6 +17,7 @@ extends Node2D
 var chunks: Array[Node2D] = [] 
 var position_history: Array[Dictionary] = []
 
+
 func _ready():
 	for child in get_children():
 		if child.name.begins_with("Chunk"):
@@ -24,29 +25,33 @@ func _ready():
 
 
 func _process(delta):
-	# move forward: use delta and (current) speed
+	_move_and_turn(delta)
+	_update_chunks()
+	_check_collisions()
+
+
+func add_chunk():
+	var last_chunk = get_child(-2)
+	var next_chunk = last_chunk.duplicate()
+	chunks.append(next_chunk)
+	add_child(next_chunk)
+
+
+func _move_and_turn(delta):
 	var input_dir = Input.get_axis("ui_left", "ui_right")
-	rotation += input_dir * turn_speed * delta
-	
 	var speed_input = Input.get_axis("ui_down", "ui_up")
+	rotation += input_dir * turn_speed * delta
 	speed = clamp(speed + speed_input * acceleration * delta, min_speed, max_speed)
 	turn_speed = clamp(turn_speed + speed_input * turn_acceleration * delta, min_turn_speed, max_turn_speed)
-	
 	position += Vector2.RIGHT.rotated(rotation) * speed * delta
-	
+
+
+func _update_chunks():
 	position_history.push_front({
 		"pos": position,
 		"rot": rotation
 	})
 	
-	_update_chunks()
-	
-	## check collisions
-	#   for every chunk below Chunk 2:
-	#     check if its distance from Chunk 1's position is less than twice the radius
-
-
-func _update_chunks():
 	for i in range(chunks.size()):
 		var target_distance = chunk_spacing * (i + 1)
 		var accumulated_distance = 0.0
@@ -71,6 +76,11 @@ func _update_chunks():
 		position_history.pop_back()
 
 
+func _check_collisions():
+	## check collisions
+	pass
+	#   for every chunk below Chunk 2:
+	#     check if its distance from Chunk 1's position is less than twice the radius
 func get_history_length() -> float:
 	var total = 0.0
 	for i in range(position_history.size() - 1):
