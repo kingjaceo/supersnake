@@ -6,10 +6,12 @@ extends CanvasItem
 
 
 func _reload():
+	Engine.time_scale = 1.0
 	SceneManager.reload_current_scene()
 
 
 func _back_to_main():
+	Engine.time_scale = 1.0
 	SceneManager.to_main_menu()
 
 

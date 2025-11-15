@@ -4,23 +4,14 @@
 [ext_resource type="Script" uid="uid://dwa83d3poqekm" path="res://snake/snake.gd" id="1_opl32"]
 
 [node name="Snake" type="Node2D"]
-modulate = Color(1, 0.15294118, 1, 1)
+modulate = Color(1, 0.152941, 1, 1)
 texture_filter = 1
 script = ExtResource("1_opl32")
-speed = null
-acceleration = null
-min_speed = null
-max_speed = null
-turn_speed = null
-turn_acceleration = null
-min_turn_speed = null
-max_turn_speed = null
-chunk_spacing = null
-
-[node name="Head" type="Sprite2D" parent="."]
-texture = ExtResource("1_j2kkt")
 
 [node name="Chunk1" type="Sprite2D" parent="."]
+texture = ExtResource("1_j2kkt")
+
+[node name="Chunk2" type="Sprite2D" parent="."]
 texture = ExtResource("1_j2kkt")
 
 [node name="Chunk3" type="Sprite2D" parent="."]
